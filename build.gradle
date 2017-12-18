@@ -1,0 +1,66 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath "io.realm:realm-gradle-plugin:3.4.0"
+        classpath 'me.tatarka:gradle-retrolambda:3.6.1'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    // Sdk and tools
+    compileSdkVersion = 25
+    buildToolsVersion = '25.0.3'
+
+    // Config
+    applicationId = 'com.logimine.ezselect'
+    minSdkVersion = 19
+    targetSdkVersion = 25
+    versionCode = 2
+    versionName = '1.0.1'
+
+    // Library Dependencies
+    supportLibraryVersion = '25.3.1'
+    constraintLayout = '1.0.2'
+    espressoCore = '2.2.2'
+    retrofit2 = '2.1.0'
+    retrofit2RxJava2Adapter = '1.0.0'
+    okhttp3 = '3.5.0'
+    okio = '1.11.0'
+    gson = '2.8.0'
+    ioreactivexRxJava2 = '2.0.4'
+    ioreactivexRxAndroid = '2.0.1'
+    circleImageView = '2.1.0'
+    dagger = '2.8'
+    butterknife = '8.4.0'
+    fabClans = '1.6.4'
+    easyPermissions = '0.3.0'
+    playServices = '11.0.2'
+    textDrawable = '1.0.1'
+    commonsLang3 = '3.3.2'
+    realmAdapters = '2.0.0'
+    reactiveNetworkRx2 = '0.9.0'
+    daggerCompiler = '2.8'
+    butterknifeCompiler = '8.4.0'
+    realmFieldsHelper = '1.1.1'
+    gifDrawable = '1.2.7'
+    tessTwo = '6.3.0'
+    bluetoothSpp = '1.0.0'
+
+    // Testing Dependencies
+    junit = '4.12'
+}
